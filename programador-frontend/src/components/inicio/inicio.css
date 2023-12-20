@@ -1,0 +1,67 @@
+@media(min-width: 360px) {
+    .CopyRightInicio {
+        top: 87%;
+        left: -28%;
+        position: absolute;
+    }
+
+    .DivBotonesInicio {
+        /* border: solid 2px blue; */
+        border-radius: 9px 9px 9px 9px;
+        /*box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;*/
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
+        padding: 50px;
+        text-align: center
+    }
+
+    .DivBotonesInicio h1 {
+        /* border: solid 2px green; */
+        font-size:xx-large;
+        margin-top: 5%;
+        margin-bottom: 3%;
+    }
+
+    .DivBotonesInicio {
+        margin-top: 40px;
+    }
+
+    .botonesInicio {
+        display: flex;
+        justify-content: space-between;
+        margin-left: -12px;
+        padding-top: 35%;
+        width: 110%;
+    }
+}
+
+@media (min-width: 576px) {
+
+    .botonesInicio {
+        /* border: solid 2px blue; */
+        display: flex;
+        justify-content: space-around;
+        margin-left: -12px;
+        margin-top: 17%;
+        padding-top: 30px;
+        width: 110%;
+    }
+    .CopyRightInicio {
+        margin-left: 14%;
+    }
+}
+
+@media(min-width: 768px) {
+    .CopyRightInicio {
+        margin-left: 18%;
+    }
+}
+@media(min-width: 992px) {
+    .CopyRightInicio {
+        margin-left: 20%;
+    }
+    .botonesInicio{
+        margin-top: 7%;
+    }
+}

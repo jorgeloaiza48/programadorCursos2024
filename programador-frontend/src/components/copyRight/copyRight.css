@@ -1,0 +1,48 @@
+/* .CopyrightIcon {
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotateY(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotateY(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotateX(360deg);
+        transform: rotateY(360deg);
+    }
+} */
+
+@media(min-width: 360px) {
+footer{
+   /*  border: solid 2px red;  */
+    position: fixed;
+    left: -27%;
+    bottom: 6%;
+}
+.iconsFooter {
+    /* border: solid 2px blue; */
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10%;   
+}
+}
+@media(min-width: 576px) {
+    footer{
+        /*  border: solid 2px red;  */
+         position: fixed;
+         left: -14%;
+         bottom: 0%;
+     }
+}
+

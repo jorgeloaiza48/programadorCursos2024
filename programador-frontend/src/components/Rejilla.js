@@ -54,8 +54,8 @@ function Rejilla() {
 
   //****Crea un arreglo de 24 filas por 250 columnas(24x250)
   let Data = new Array(24) //crea un array de 25 posiciones(filas)
-  for (let i = 0; i < 24; i++) {  //este ciclo coloca en cada posición un array de 250 posiciones(columnas)
-    Data[i] = new Array(250)
+  for (let i = 0; i < 24; i++) {  //este ciclo coloca en cada posición un array de 251 posiciones(columnas)
+    Data[i] = new Array(251)
   }
 
   Data[21][17] = "Total Horas"
@@ -66,9 +66,9 @@ function Rejilla() {
   Data[21][131] = "Total Horas"
   Data[21][154] = "Total Horas"
   Data[21][176] = "Total Horas"
-  Data[21][199] = "Total Horas"
+  Data[21][200] = "Total Horas"
   Data[21][222] = "Total Horas"
-  Data[21][244] = "Total Horas"
+  Data[21][245] = "Total Horas" 
 
   //Este código llena de ceros las celdas donde van las horas parciales de cada curso en cada mes
   // let coordenadasCeros = [[1, 8], [22, 29], [46, 53], [67, 74], [91, 98], [114, 121], [136, 143], [160, 167], [182, 189], [205, 212], [228, 235]]
@@ -283,14 +283,14 @@ function Rejilla() {
         viewportColumnRenderingOffset={250} //Esta línea es para que las celdas pintadas se conserven asi cuando se avanza con la barra de desplazamiento horizontal.
         // rowHeaders={true}
         // colHeaders={true}                                                                                                                                                                                                                
-        mergeCells={[{ row: 1, col: 1, rowspan: 1, colspan: 21 }, { row: 1, col: 23, rowspan: 1, colspan: 21 }, { row: 1, col: 45, rowspan: 1, colspan: 22 }, { row: 1, col: 68, rowspan: 1, colspan: 23 }, { row: 1, col: 92, rowspan: 1, colspan: 20 }, { row: 1, col: 113, rowspan: 1, colspan: 23 }, { row: 1, col: 137, rowspan: 1, colspan: 22 }, { row: 1, col: 160, rowspan: 1, colspan: 21 }, { row: 1, col: 182, rowspan: 1, colspan: 22 }, { row: 1, col: 205, rowspan: 1, colspan: 22 }, { row: 1, col: 228, rowspan: 1, colspan: 21 }, { row: 21, col: 17, rowspan: 1, colspan: 5 }, { row: 22, col: 17, rowspan: 1, colspan: 5 }, { row: 21, col: 39, rowspan: 1, colspan: 5 }, { row: 22, col: 39, rowspan: 1, colspan: 5 }, { row: 22, col: 62, rowspan: 1, colspan: 5 }, { row: 21, col: 62, rowspan: 1, colspan: 5 }, { row: 21, col: 86, rowspan: 1, colspan: 5 }, { row: 22, col: 86, rowspan: 1, colspan: 5 }, { row: 22, col: 107, rowspan: 1, colspan: 5 }, { row: 21, col: 107, rowspan: 1, colspan: 5 }, { row: 21, col: 131, rowspan: 1, colspan: 5 }, { row: 22, col: 131, rowspan: 1, colspan: 5 }, { row: 21, col: 154, rowspan: 1, colspan: 5 }, { row: 22, col: 154, rowspan: 1, colspan: 5 }, { row: 22, col: 176, rowspan: 1, colspan: 5 }, { row: 21, col: 176, rowspan: 1, colspan: 5 }, { row: 21, col: 199, rowspan: 1, colspan: 5 }, { row: 22, col: 199, rowspan: 1, colspan: 5 }, { row: 22, col: 222, rowspan: 1, colspan: 5 }, { row: 21, col: 222, rowspan: 1, colspan: 5 }, { row: 21, col: 244, rowspan: 1, colspan: 5 }, { row: 22, col: 244, rowspan: 1, colspan: 5 }]} //combinar celdas
+        mergeCells={[{ row: 1, col: 1, rowspan: 1, colspan: 21 }, { row: 1, col: 23, rowspan: 1, colspan: 21 }, { row: 1, col: 45, rowspan: 1, colspan: 22 }, { row: 1, col: 68, rowspan: 1, colspan: 23 }, { row: 1, col: 92, rowspan: 1, colspan: 20 }, { row: 1, col: 113, rowspan: 1, colspan: 23 }, { row: 1, col: 137, rowspan: 1, colspan: 22 }, { row: 1, col: 160, rowspan: 1, colspan: 21 }, { row: 1, col: 182, rowspan: 1, colspan: 23 }, { row: 1, col: 206, rowspan: 1, colspan: 21 }, { row: 1, col: 228, rowspan: 1, colspan: 22 }, { row: 21, col: 17, rowspan: 1, colspan: 5 }, { row: 22, col: 17, rowspan: 1, colspan: 5 }, { row: 21, col: 39, rowspan: 1, colspan: 5 }, { row: 22, col: 39, rowspan: 1, colspan: 5 }, { row: 22, col: 62, rowspan: 1, colspan: 5 }, { row: 21, col: 62, rowspan: 1, colspan: 5 }, { row: 21, col: 86, rowspan: 1, colspan: 5 }, { row: 22, col: 86, rowspan: 1, colspan: 5 }, { row: 22, col: 107, rowspan: 1, colspan: 5 }, { row: 21, col: 107, rowspan: 1, colspan: 5 }, { row: 21, col: 131, rowspan: 1, colspan: 5 }, { row: 22, col: 131, rowspan: 1, colspan: 5 }, { row: 21, col: 154, rowspan: 1, colspan: 5 }, { row: 22, col: 154, rowspan: 1, colspan: 5 }, { row: 22, col: 176, rowspan: 1, colspan: 5 }, { row: 21, col: 176, rowspan: 1, colspan: 5 }, { row: 21, col: 200, rowspan: 1, colspan: 5 }, { row: 22, col: 200, rowspan: 1, colspan: 5 }, { row: 22, col: 222, rowspan: 1, colspan: 5 }, { row: 21, col: 222, rowspan: 1, colspan: 5 }, { row: 21, col: 245, rowspan: 1, colspan: 5 }, { row: 22, col: 245, rowspan: 1, colspan: 5 }]} //combinar celdas
         //contextMenu={true}           
         //readOnly={true}
         className='htCenter'
         //Colorea los días festivos  
         cells={function (row, col, prop) {
           let cellProperties = []
-          let columnasFestivos = [39, 42, 43,68,76,92,97,113,141,149,191,206,211,245] //este arreglo contiene las posiciones de las columnas de los festivos del año 2023
+          let columnasFestivos = [39, 42, 43,68,76,92,97,113,141,149,191,207,212] //este arreglo contiene las posiciones de las columnas de los festivos del año 2024
           for (let i = 0; i < columnasFestivos.length; i++) {
             for (let j = 4; j <= 19; j++) {
               if (row === j && col === columnasFestivos[i]) {
@@ -312,7 +312,7 @@ function Rejilla() {
             }
           }
           //Bordes donde va la suma de las horas
-          let columnasBordesHoras = [17, 20, 39, 43, 62, 66, 86, 89, 107, 111, 131, 134, 154, 158, 176, 180, 199, 203, 222, 226, 244, 248]
+          let columnasBordesHoras = [17, 20, 39, 43, 62, 66, 86, 89, 107, 111, 131, 134, 154, 158, 176, 180, 200, 203, 222, 226, 245, 248]
           for (let i = 0; i < columnasBordesHoras.length; i = i + 2) {
             if (row === 21 && col >= columnasBordesHoras[i] && col <= columnasBordesHoras[i + 1]) {
               cellProperties.className = 'borders'
@@ -328,7 +328,7 @@ function Rejilla() {
           } */
 
           //este ciclo pinta de blanco las fechas de la fila 0.
-          for (let i = 0; i < 249; i++) {
+          for (let i = 0; i <= 249; i++) {
             if (row === 0 && col === i) { cellProperties.className = 'colorMeses' }
           }
 
@@ -847,7 +847,7 @@ function Rejilla() {
                         let coordColorHoras = []
 
                         //Este código pinta los cursos en cada mes(en la parte de abajo)con su respectiva hora  
-                        let arrayAux = [1, 8, 23, 30, 46, 53, 68, 75, 92, 99, 113, 120, 137, 144, 160, 167, 182, 189, 205, 212, 228, 235]
+                        let arrayAux = [1, 8, 23, 30, 46, 53, 68, 75, 92, 99, 113, 120, 137, 144, 160, 167, 182, 189, 206, 212, 228, 235]
                         let k = 0
                         for (let i = 0; i <= horasCursoPorMes.length; i++) {
                           if (horasCursoPorMes[i] !== 0) {
@@ -871,7 +871,7 @@ function Rejilla() {
 
                         // setTimeout(() => {
                         //Este código va sumando las horas parciales de cada curso en cada mes e imprime ese total.
-                        let coordenadasHoras = [[1, 8, 17], [22, 29, 40], [46, 53, 62], [67, 74, 86], [91, 98, 108], [114, 121, 131], [136, 143, 154], [160, 167, 176], [182, 189, 199], [205, 212, 222], [228, 235, 244]]
+                        let coordenadasHoras = [[1, 8, 17], [22, 29, 40], [46, 53, 62], [67, 74, 86], [91, 98, 108], [114, 121, 131], [136, 143, 154], [160, 167, 176], [182, 189, 200], [205, 212, 222], [228, 235, 245]]
                         let horasTotalesPorMes = 0
                         for (let i = 0; i <= coordenadasHoras.length - 1; i++) {
                           for (let j = coordenadasHoras[i][0]; j <= coordenadasHoras[i][1]; j++) {
@@ -914,7 +914,7 @@ function Rejilla() {
         //hiddenRows = {rows = {2}}
         //cell={[{row:0, col:5, className:'celdas'},{row:6, col:1, className:'celdas'},{row:5, col:8, className:'celdas'}]}             
         //cell={[{row:0, col:4,renderer:myRenderer}]}
-        colWidths={[60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60]} //ancho de las columnas en orden de izquierda a derecha                        
+        colWidths={[60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20,60]} //ancho de las columnas en orden de izquierda a derecha                        
         licenseKey='non-commercial-and-evaluation' // for non-commercial use only
       >
       </HotTable>

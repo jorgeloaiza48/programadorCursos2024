@@ -68,7 +68,7 @@ function Rejilla() {
   Data[21][176] = "Total Horas"
   Data[21][200] = "Total Horas"
   Data[21][222] = "Total Horas"
-  Data[21][245] = "Total Horas" 
+  Data[21][245] = "Total Horas"
 
   //Este código llena de ceros las celdas donde van las horas parciales de cada curso en cada mes
   // let coordenadasCeros = [[1, 8], [22, 29], [46, 53], [67, 74], [91, 98], [114, 121], [136, 143], [160, 167], [182, 189], [205, 212], [228, 235]]
@@ -290,7 +290,7 @@ function Rejilla() {
         //Colorea los días festivos  
         cells={function (row, col, prop) {
           let cellProperties = []
-          let columnasFestivos = [39, 42, 43,68,76,92,97,113,141,149,191,207,212] //este arreglo contiene las posiciones de las columnas de los festivos del año 2024
+          let columnasFestivos = [39, 42, 43, 68, 76, 92, 97, 113, 141, 149, 191, 207, 212] //este arreglo contiene las posiciones de las columnas de los festivos del año 2024
           for (let i = 0; i < columnasFestivos.length; i++) {
             for (let j = 4; j <= 19; j++) {
               if (row === j && col === columnasFestivos[i]) {
@@ -441,11 +441,11 @@ function Rejilla() {
 
           return cellProperties
         }}
-        //Esta función desabilita las celdas en las cuales no se puede iniciar una programación tales como los nombres de los días entre otras.
+        //Esta función deshabilita las celdas en las cuales no se puede iniciar una programación tales como los nombres de los días entre otras.
         beforeOnCellMouseDown={function (event, coords, _TD, controller) {
           console.log("Coord.row ", coords.row)
           console.log("Coord.col ", coords.col)
-          if (coords.row < 4 || coords.row === 20 || coords.row >= 22 || coords.col === 0 || coords.col === 21 || coords.col === 45 || coords.col === 66 || coords.col === 90 || coords.col === 113 || coords.col === 135 || coords.col === 159 || coords.col === 181 || coords.col === 204 || coords.col === 227 || coords.col === 249 || (coords.row === 21 && ((coords.col >= 9 && coords.col <= 20))) || (coords.row === 21 && ((coords.col >= 30 && coords.col <= 44))) || (coords.row === 21 && ((coords.col >= 54 && coords.col <= 65))) || (coords.row === 21 && ((coords.col >= 75 && coords.col <= 89))) || (coords.row === 21 && ((coords.col >= 99 && coords.col <= 112))) || (coords.row === 21 && ((coords.col >= 122 && coords.col <= 134))) || (coords.row === 21 && ((coords.col >= 144 && coords.col <= 158))) || (coords.row === 21 && ((coords.col >= 168 && coords.col <= 180))) || (coords.row === 21 && ((coords.col >= 190 && coords.col <= 203))) || (coords.row === 21 && ((coords.col >= 213 && coords.col <= 226))) || (coords.row === 21 && ((coords.col >= 236 && coords.col <= 248)))) {
+          if (coords.row < 4 || coords.row === 20 || coords.row >= 22 || coords.col === 0 || coords.col === 22 || coords.col === 44 || coords.col === 67 || coords.col === 91 || coords.col === 112 || coords.col === 136 || coords.col === 159 || coords.col === 181 || coords.col === 205 || coords.col === 227 || coords.col === 250 || (coords.row === 21 && ((coords.col >= 9 && coords.col <= 20))) || (coords.row === 21 && ((coords.col >= 30 && coords.col <= 44))) || (coords.row === 21 && ((coords.col >= 54 && coords.col <= 65))) || (coords.row === 21 && ((coords.col >= 75 && coords.col <= 89))) || (coords.row === 21 && ((coords.col >= 99 && coords.col <= 112))) || (coords.row === 21 && ((coords.col >= 122 && coords.col <= 134))) || (coords.row === 21 && ((coords.col >= 144 && coords.col <= 158))) || (coords.row === 21 && ((coords.col >= 168 && coords.col <= 180))) || (coords.row === 21 && ((coords.col >= 190 && coords.col <= 203))) || (coords.row === 21 && ((coords.col >= 213 && coords.col <= 226))) || (coords.row === 21 && ((coords.col >= 236 && coords.col <= 248)))) {
             event.stopImmediatePropagation()
             console.log("Click en una celda donde no se puede programar")
           }
@@ -836,18 +836,11 @@ function Rejilla() {
 
                         }
 
-                        //window.location.reload(true);
-                        //conteoHorasFebrero()
-                        // const iterable = [feb(cantidadHorasSegunColor), mar(cantidadHorasSegunColor)]
-                        // Promise.all(iterable)
-                        //   .then(function (results) { console.log("Se leyeron los colores de febrero y marzo:", results) })
-                        //   .catch(function (err) { console.log(err) })
-
                         //Este array guarda las coordenadas donde se pinta un curso(en la parte de abajo), el color y las horas de ese curso en cada mes.
                         let coordColorHoras = []
 
                         //Este código pinta los cursos en cada mes(en la parte de abajo)con su respectiva hora  
-                        let arrayAux = [1, 8, 23, 30, 46, 53, 68, 75, 92, 99, 113, 120, 137, 144, 160, 167, 182, 189, 206, 212, 228, 235]
+                        let arrayAux = [1, 8, 23, 30, 45, 53, 68, 75, 92, 99, 113, 120, 137, 144, 160, 167, 182, 189, 206, 212, 228, 235]
                         let k = 0
                         for (let i = 0; i <= horasCursoPorMes.length; i++) {
                           if (horasCursoPorMes[i] !== 0) {
@@ -914,7 +907,7 @@ function Rejilla() {
         //hiddenRows = {rows = {2}}
         //cell={[{row:0, col:5, className:'celdas'},{row:6, col:1, className:'celdas'},{row:5, col:8, className:'celdas'}]}             
         //cell={[{row:0, col:4,renderer:myRenderer}]}
-        colWidths={[60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20,60]} //ancho de las columnas en orden de izquierda a derecha                        
+        colWidths={[60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 60]} //ancho de las columnas en orden de izquierda a derecha                        
         licenseKey='non-commercial-and-evaluation' // for non-commercial use only
       >
       </HotTable>

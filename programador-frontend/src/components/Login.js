@@ -104,37 +104,63 @@ export default function Login() {
 
 
     return (
-        <div className='formLogin'>
-            <Link to="/">
-                <div className='divHome'>
-                    <CottageIcon sx={{ fontSize: 40 }}></CottageIcon>
-                    <p><strong>Inicio</strong></p>
+        /*  <div classNameName='formLogin'>
+             <Link to="/">
+                 <div classNameName='divHome'>
+                     <CottageIcon sx={{ fontSize: 40 }}></CottageIcon>
+                     <p><strong>Inicio</strong></p>
+                 </div>
+             </Link>
+             <form onSubmit={iniciarSesion}>
+                 <LoginIcon classNameName='loginIcon' sx={{ fontSize: 45 }}></LoginIcon>
+                 <h4 classNameName='inicioSesion'>Inicio de sesión</h4>
+                 <div classNameName='containerPrincipalLogin '>
+                     <div >
+                         <label>Usuario o email:</label>
+                         <input type="email" classNameName='form-control' name='email' onChange={handleChange} onClick={handleClickEmail} autoComplete="on" placeholder='Ingrese usuario' /> <br />
+                     </div>
+                     <p classNameName='errorEmailLogin'>{errorEmail}</p>
+                     <div >
+                         <label>Contraseña:</label>
+                         <input type={showPassword ? "password" : "text"} classNameName='form-control' name='password' onChange={handleChange} onClick={handleClickPassword} autoComplete="on" placeholder='Ingrese contraseña' /> <br />
+                     </div>
+                     <p classNameName='errorPasswordLogin'>{errorPassword}</p>
+                     <div classNameName='buttonLogin'><button type="submit" classNameName='btn btn-primary' >Iniciar Sesión</button></div>
+                     <div classNameName='regisOlvido'>
+                         <div classNameName='registrarse'><Link to="/registro">Registrarse</Link></div>
+                         <div classNameName='olvido'><Link to="/olvidoPassword">¿Olvidó la contraseña?</Link></div>
+                     </div>
+                     <MailOutlineIcon classNameName='MailOutlineIconLogin'></MailOutlineIcon>
+                     <PasswordIcon classNameName='PasswordIconLogin' onClick={handleShowPassword}></PasswordIcon>
+                 </div>
+             </form>
+             <div classNameName='copyRightLogin'><CopyRight></CopyRight></div>
+         </div> */
+        <div className="w-full max-w-xs">
+            <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" for="username">
+                        Username
+                    </label>
+                    <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username" />
                 </div>
-            </Link>
-            <form onSubmit={iniciarSesion}>
-                <LoginIcon className='loginIcon' sx={{ fontSize: 45 }}></LoginIcon>
-                <h4 className='inicioSesion'>Inicio de sesión</h4>
-                <div className='containerPrincipalLogin '>
-                    <div >
-                        <label>Usuario o email:</label>
-                        <input type="email" className='form-control' name='email' onChange={handleChange} onClick={handleClickEmail} autoComplete="on" placeholder='Ingrese usuario' /> <br />
-                    </div>
-                    <p className='errorEmailLogin'>{errorEmail}</p>
-                    <div >
-                        <label>Contraseña:</label>
-                        <input type={showPassword ? "password" : "text"} className='form-control' name='password' onChange={handleChange} onClick={handleClickPassword} autoComplete="on" placeholder='Ingrese contraseña' /> <br />
-                    </div>
-                    <p className='errorPasswordLogin'>{errorPassword}</p>
-                    <div className='buttonLogin'><button type="submit" className='btn btn-primary' >Iniciar Sesión</button></div>
-                    <div className='regisOlvido'>
-                        <div className='registrarse'><Link to="/registro">Registrarse</Link></div>
-                        <div className='olvido'><Link to="/olvidoPassword">¿Olvidó la contraseña?</Link></div>
-                    </div>
-                    <MailOutlineIcon className='MailOutlineIconLogin'></MailOutlineIcon>
-                    <PasswordIcon className='PasswordIconLogin' onClick={handleShowPassword}></PasswordIcon>
+                <div className="mb-6">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" for="password">
+                        Password
+                    </label>
+                    <input className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************"/>
+                        <p className="text-red-500 text-xs italic">Please choose a password.</p>
+                </div>
+                <div className="flex items-center justify-between">
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                        Sign In
+                    </button>
+                    <a className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
+                        Forgot Password?
+                    </a>
                 </div>
             </form>
-            <div className='copyRightLogin'><CopyRight></CopyRight></div>
+            
         </div>
     )
 }

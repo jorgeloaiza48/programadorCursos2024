@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './login.css'
+//import './login.css'
 import { Link } from "react-router-dom"
 //import axios from 'axios'
 import { useState } from 'react'
@@ -136,11 +136,16 @@ export default function Login() {
              </form>
              <div classNameName='copyRightLogin'><CopyRight></CopyRight></div>
          </div> */
-        <div className="w-full max-w-xs">
-            <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+
+        <div className="flex items-center justify-center h-screen bg-gradient-to-r from-blue-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
+            <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4  w-2/6">
+                <Link to="/">
+                    <CottageIcon sx={{ fontSize: 40 }}></CottageIcon>
+                    <p><strong>Inicio</strong></p>
+                </Link>
                 <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" for="username">
-                        Username
+                        Correo electrónico
                     </label>
                     <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username" />
                 </div>
@@ -148,19 +153,20 @@ export default function Login() {
                     <label className="block text-gray-700 text-sm font-bold mb-2" for="password">
                         Password
                     </label>
-                    <input className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************"/>
-                        <p className="text-red-500 text-xs italic">Please choose a password.</p>
+                    <input className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************" />
                 </div>
                 <div className="flex items-center justify-between">
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                         Sign In
                     </button>
                     <a className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
                         Forgot Password?
                     </a>
-                </div>
+                </div>                
             </form>
+            <CopyRight></CopyRight>
             
+
         </div>
     )
 }

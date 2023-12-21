@@ -30,8 +30,7 @@ footer{
     left: -27%;
     bottom: 6%;
 }
-.iconsFooter {
-    /* border: solid 2px blue; */
+.iconsFooter {   
     display: flex;
     justify-content: space-around;
     margin-bottom: 10%;   
@@ -45,4 +44,17 @@ footer{
          bottom: 0%;
      }
 }
-
+@media(min-width: 768px) {
+    footer{        
+         position: fixed;
+         left: -10%;
+         bottom: 6%;
+     }
+}
+@media(min-width: 1024px) {
+    footer{        
+         position: fixed;
+         left: -7%;
+         bottom: 6%;
+     }
+}

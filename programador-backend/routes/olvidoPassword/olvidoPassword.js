@@ -29,11 +29,12 @@ router.post("/", (req, res) => {
                 }
                 token = jwt.sign(payload, JWT_SECRTET, { expiresIn: '5m' })
                                 
-                //link = `http://localhost:3000/#/reset-password/${userFilter[0].id}/${token}`                                           
+                link = `http://localhost:3000/#/reset-password/${userFilter[0].id}/${token}`                                           
                 //link = `https://programador-cursos.onrender.com/#/reset-password/${userFilter[0].id}/${token}`
 
                 URL = process.env.URL
-                link = `${URL}/#/reset-password/${userFilter[0].id}/${token}`
+                //link = `${URL}/#/reset-password/${userFilter[0].id}/${token}`
+                
 
                 // create reusable transporter object using the default SMTP transport               
                 const transporter = nodemailer.createTransport({
@@ -43,7 +44,8 @@ router.post("/", (req, res) => {
                     secure: true,
                     auth: {
                         user: "jelm48@misena.edu.co",     //variable de entorno. Ver archivo ".env"
-                        pass: process.env.PASSWORD  //variable de entorno. Ver archivo ".env"
+                        //pass: process.env.PASSWORD  //variable de entorno. Ver archivo ".env"
+                        pass: "pzdl edyv smwk gugz"
                     }
                 })
                 //Features of email to be sent

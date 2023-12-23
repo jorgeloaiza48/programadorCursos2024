@@ -9,16 +9,14 @@ import GoogleIcon from '@mui/icons-material/Google';
 export default function CopyRight() {
 
     return (
-       /*  <div className='divFooter'> */
-            <footer>
-                <div className='iconsFooter'>
-                    <a href='https://www.linkedin.com/in/jelm48/'><LinkedInIcon></LinkedInIcon></a>
-                    <a href='https://github.com/jorgeloaiza48'><GitHubIcon></GitHubIcon></a>
-                    <a href='https://www.facebook.com/jeloaiza2/'><FacebookIcon></FacebookIcon></a>
-                    <a href='#'><GoogleIcon></GoogleIcon></a>
-                </div>
-                <h5><CopyrightIcon></CopyrightIcon> jelm48@misena.edu.co</h5>
+       
+            <footer className='flex flex-wrap justify-between'>
+                <a href='https://www.linkedin.com/in/jelm48/'><LinkedInIcon></LinkedInIcon></a>
+                <a href='https://github.com/jorgeloaiza48'><GitHubIcon></GitHubIcon></a>
+                <a href='https://www.facebook.com/jeloaiza2/'><FacebookIcon></FacebookIcon></a>
+                <a href='#'><GoogleIcon></GoogleIcon></a>
+                <h5 className='w-full flex justify-center py-8'><CopyrightIcon></CopyrightIcon> jelm48@misena.edu.co</h5>
             </footer>
-       /*  </div> */
+       
     )
 }

@@ -9,10 +9,11 @@ import Cookies from 'universal-cookie'
 //import Cookie from 'js-cookie'
 import LoginIcon from '@mui/icons-material/Login';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import PasswordIcon from '@mui/icons-material/Password';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import Swal from 'sweetalert2'
 import CopyRight from './copyRight/CopyRight'
 import CottageIcon from '@mui/icons-material/Cottage';
+import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';
 
 
 export default function Login() {
@@ -112,12 +113,12 @@ export default function Login() {
                  </div>
              </Link>
              <form onSubmit={iniciarSesion}>
-                 <LoginIcon classNameName='loginIcon' sx={{ fontSize: 45 }}></LoginIcon>
-                 <h4 classNameName='inicioSesion'>Inicio de sesión</h4>
-                 <div classNameName='containerPrincipalLogin '>
+                 <LoginIcon className='loginIcon' sx={{ fontSize: 45 }}></LoginIcon>
+                 <h4 className='inicioSesion'>Inicio de sesión</h4>
+                 <div className='containerPrincipalLogin '>
                      <div >
                          <label>Usuario o email:</label>
-                         <input type="email" classNameName='form-control' name='email' onChange={handleChange} onClick={handleClickEmail} autoComplete="on" placeholder='Ingrese usuario' /> <br />
+                         <input type="email" className='form-control' name='email' onChange={handleChange} onClick={handleClickEmail} autoComplete="on" placeholder='Ingrese usuario' /> <br />
                      </div>
                      <p classNameName='errorEmailLogin'>{errorEmail}</p>
                      <div >
@@ -137,36 +138,44 @@ export default function Login() {
              <div classNameName='copyRightLogin'><CopyRight></CopyRight></div>
          </div> */
 
-        <div className="flex items-center justify-center h-screen bg-gradient-to-r from-blue-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
-            <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4  w-2/6">
-                <Link to="/">
-                    <CottageIcon sx={{ fontSize: 40 }}></CottageIcon>
-                    <p><strong>Inicio</strong></p>
-                </Link>
+        <div className="flex items-center justify-center h-screen bg-gradient-to-r from-blue-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">            
+            <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4  w-2/6" onSubmit={iniciarSesion}>            
+                <div className='flex justify-between'>
+                    <Link to="/">
+                        <CottageIcon sx={{ fontSize: 40 }}></CottageIcon>
+                        <p><strong>Inicio</strong></p>
+                    </Link>
+                    <Link to="/registro">
+                        <PersonAddAltIcon sx={{ fontSize: 40 }}></PersonAddAltIcon>
+                        <p><strong>Registrarse</strong></p>
+                    </Link>
+                </div>
                 <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" for="username">
                         Correo electrónico
                     </label>
-                    <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username" />
+                    <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="email" name='email' onChange={handleChange} onClick={handleClickEmail} autoComplete="on" placeholder="Username" />
                 </div>
+                <p className='text-red-600'>{errorEmail}</p>
                 <div className="mb-6">
                     <label className="block text-gray-700 text-sm font-bold mb-2" for="password">
                         Password
                     </label>
-                    <input className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************" />
+                    <input className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type={showPassword ? "password" : "text"} name='password' onChange={handleChange} onClick={handleClickPassword} placeholder="******************" />
+                    <VisibilityOffIcon className='absolute top-5' onClick={handleShowPassword}></VisibilityOffIcon>
                 </div>
+
+                <p className='text-red-600'>{errorPassword}</p>
                 <div className="flex items-center justify-between">
                     <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                         Sign In
                     </button>
-                    <a className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
+                    <Link to="/olvidoPassword"><a className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" onClick={handleShowPassword} href="#">
                         Forgot Password?
-                    </a>
-                </div>                
+                    </a></Link>
+                </div>
             </form>
             <CopyRight></CopyRight>
-            
-
         </div>
     )
 }

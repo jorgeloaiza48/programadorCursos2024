@@ -43,7 +43,7 @@ router.post("/", (req, res) => {
                     port: 2525,  //25 o 587 o 465 o 2525
                     secure: true,
                     auth: {
-                        user: "jelm48@misena.edu.co",     //variable de entorno. Ver archivo ".env"
+                        user: "jelm48@misena.edu.co",     
                         pass: process.env.PASSWORD  //variable de entorno. Ver archivo ".env"
                         //pass: "pzdl edyv smwk gugz" //esta es la contraseña generada por google para apps en este caso "nodemailer"
                     }

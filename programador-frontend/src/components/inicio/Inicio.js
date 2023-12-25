@@ -4,7 +4,7 @@ import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import { Link } from "react-router-dom"
 import CopyRight from '../copyRight/CopyRight';
 import './inicio.css'
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+//import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 function Inicio() {
 

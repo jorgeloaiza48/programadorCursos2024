@@ -36,7 +36,7 @@ router.post("/", (req, res) => {
                 link = `${URL}/#/reset-password/${userFilter[0].id}/${token}`
                 
 
-                // create reusable transporter object using the default SMTP transport               
+                // create reusable transporter object using the default SMTP transport              
                 const transporter = nodemailer.createTransport({
                     service: "Gmail",
                     host: 'smtp.gmail.com',

@@ -273,7 +273,6 @@ function Rejilla() {
   return (
 
     <div className="rejilla" >
-
       <div className='bienvenidoRejilla'><h4>Bienvenido {Cookie.get('email')}</h4></div>
 
       <HotTable
@@ -299,10 +298,11 @@ function Rejilla() {
             }
             //Coloca bordes a la programación
             let columns = [0, 21, 45, 66, 90, 113, 135, 159, 181, 204, 227, 249]
-            for (let i = 0; i < columns.length; i++)
+            for (let i = 0; i < columns.length; i = i + 1) {
               if (row > 3 && row < 20 && col > columns[i] && col < columns[i + 1]) {
                 cellProperties.className = 'borders'
               }
+            }
           }
           //Bordes de las celdas donde van las horas
           let columnasBordes = [1, 8, 22, 29, 46, 53, 67, 74, 91, 98, 114, 121, 136, 143, 160, 167, 182, 189, 205, 212, 228, 235]
@@ -323,9 +323,14 @@ function Rejilla() {
               cellProperties.className = 'centrarTexto'
             }
           }
-          /* if (row === 22 && col <= 20 && col >= 16) {
-            cellProperties.className = 'centrarTexto'
-          } */
+          //Este ciclo centra el texto en las columnas donde se relacionan las horas(6 a 7, 7 a 8,...)
+          let columnasDeHoras = [0, 22, 44, 67, 91, 112, 136, 159, 181, 205, 227, 250]
+          for (let i = 0; i <= columnasDeHoras.length; i++) {
+            if (row >= 4 && row <= 19 && col === columnasDeHoras[i]) {
+              cellProperties.className = 'centrarTexto'
+              //cellProperties.className = 'borders'
+            }
+          }
 
           //este ciclo pinta de blanco las fechas de la fila 0.
           for (let i = 0; i <= 249; i++) {
@@ -922,7 +927,7 @@ function Rejilla() {
         <div><h3>2024</h3></div>
         <div><img src="/punticoVerde.png" alt='punticoVerde' /></div>
       </div>
-      <div className='copyRightRejilla'><CopyRight></CopyRight></div>
+      <CopyRight></CopyRight>
       <SessionExpired></SessionExpired>
     </div>
 

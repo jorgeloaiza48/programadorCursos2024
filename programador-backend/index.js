@@ -5,7 +5,8 @@ const cors = require('cors');
 const app = express()
 const bodyParser = require('body-parser');
 const path = require('path');
-require('dotenv').config({ path: `.env.${process.env.NODE_ENV}`})   //carga las variables del archivo .env
+require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` })   //carga las variables del archivo .env
+const axios = require('axios');
 
 //Al desplegar el proyecto en un servicio remoto es necesario que las rutas del backend empiecen con 'api' para no confundirlas
 //app.use(history()); // Colocamos este middleware cuando estamos usando el BrowserRouter
@@ -28,7 +29,7 @@ app.use('/forgot-password', require('./routes/olvidoPassword/olvidoPassword'))
 // app.use('/token-verify/:id/:token', require('./routes/olvidoPassword/tokenVerify'))
 
 app.get('/reset-password/:id/:token', require('./routes/olvidoPassword/tokenVerify').tokenverify)
-app.post('/reset-password/:id',   require('./routes/olvidoPassword/newPassword').newPassword)
+app.post('/reset-password/:id', require('./routes/olvidoPassword/newPassword').newPassword)
 
 
 //Esta línea realiza una prueba con la extensión "REST client" para comprobar las peticiones https://www.youtube.com/watch?v=6vOZSUDgSoM
